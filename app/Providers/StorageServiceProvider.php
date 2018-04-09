@@ -27,6 +27,6 @@ class StorageServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind(StorageInterface::class, LocalStorage::class);
+        $this->app->bind(StorageInterface::class, AWSS3::class);
     }
 }
