@@ -7,3 +7,8 @@ This repo is created for learning purpose to practice on :
 - Using one of AWS (s3)
 - Understanding Repository Pattern
 - Test Dummy files upload  
+
+
+### Todo
+
+- Write unit and behavior tests
