@@ -12,7 +12,7 @@ namespace App\Repositories;
 use App\Models\File;
 use App\Repositories\Contracts\FileRepositoryInterface;
 
-class FileEloquent implements FileRepositoryInterface
+abstract class FileEloquent implements FileRepositoryInterface
 {
     protected $model;
 

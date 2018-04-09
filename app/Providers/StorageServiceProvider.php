@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Services\Storage\Disks\LocalStorage;
 use Illuminate\Support\ServiceProvider;
 
 use App\Services\Storage\Contracts\StorageInterface;
@@ -26,6 +27,6 @@ class StorageServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind(StorageInterface::class, AWSS3::class);
+        $this->app->bind(StorageInterface::class, LocalStorage::class);
     }
 }

@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Repositories\Contracts\FileRepositoryInterface;
 use App\Repositories\FileEloquent;
+use App\Repositories\FileSqlite;
 use Illuminate\Support\ServiceProvider;
 
 use App\Services\Storage\Contracts\StorageInterface;
@@ -28,6 +29,6 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind(FileRepositoryInterface::class, FileEloquent::class);
+        $this->app->bind(FileRepositoryInterface::class, FileSqlite::class);
     }
 }
