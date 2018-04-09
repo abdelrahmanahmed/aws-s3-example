@@ -1,0 +1,31 @@
+<?php
+
+namespace App\Providers;
+
+use Illuminate\Support\ServiceProvider;
+
+use App\Services\Storage\Contracts\StorageInterface;
+use App\Services\Storage\Disks\AWSS3;
+
+class StorageServiceProvider extends ServiceProvider
+{
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        //
+    }
+
+    /**
+     * Register any application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->app->bind(StorageInterface::class, AWSS3::class);
+    }
+}

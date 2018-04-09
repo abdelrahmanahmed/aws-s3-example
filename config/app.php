@@ -176,6 +176,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\StorageServiceProvider::class,
+        App\Providers\RepositoryServiceProvider::class,
 
     ],
 
@@ -225,7 +227,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'FileService' => \App\Services\Storage\FileService::class,
     ],
 
 ];
